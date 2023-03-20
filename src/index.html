@@ -11,11 +11,151 @@
     <link rel="stylesheet" href="/dist/output.css">
 </head>
 
-<body>
-    <h1>Hello CyberDude Audience</h1>
-    <h1 class="text-orange-500">
-        Hello world!
-    </h1>
+<body class="bg-gray-200">
+    <header class="bg-indigo-900 text-center p-10">
+        <h1 class="font-black text-orange-500 text-2xl">CYBERDUDE</h1>
+        <p class="text-gray-300 text-sm mt-2 font-semibold">Free education for everyone</p>
+    </header>
+
+    <main class="m-10 flex">
+        <div class="bg-white p-5 rounded flex-1 mr-5 shadow">
+            <h3 class="text-sm font-semibold">Get Free Internship @ CyberDude</h3>
+            <p class="text-xs text-gray-600 mt-1">Get yourself skilled by joining cyberdude internship</p>
+
+            <!-- Form -->
+            <form class="my-5 ">
+                <div class="grid grid-cols-2 gap-x-5 gap-y-4">
+                    <div class="text-xs w-full">
+                        <label for="fullName" class="block text-gray-800">Full name</label>
+                        <input type="text" name="fullName" placeholder="Full name" id="fullName" class="input" required>
+                    </div>
+                    <div class="text-xs">
+                        <label for="gender" class="block text-gray-800">Gender</label>
+                        <div class="mt-2 space-x-2 text-xs">
+                            <label class=""><input type="radio" id="gender" name="gender" value="Male" required />
+                                Male</label>
+                            <label><input type="radio" id="gender" name="gender" value="Female" required />
+                                Female</label>
+                            <label><input type="radio" id="gender" name="gender" value="Others" required />
+                                Others</label>
+                        </div>
+                    </div>
+                    <div class="text-xs w-full">
+                        <label for="emailAddress" class="block text-gray-800">Email Address</label>
+                        <input type="email" name="email" placeholder="you@wonderful.com" id="emailAddress" class="input"
+                            required>
+                    </div>
+                    <div class="text-xs w-full">
+                        <label for="dob" class="block text-gray-800">Date of Birth</label>
+                        <input type="date" name="dob" placeholder="D.O.B" id="dob" class="input" required>
+                    </div>
+                    <div class="text-xs w-full">
+                        <label for="skillKnown" class="block text-gray-800">What skill do you know already?</label>
+                        <input type="text" name="skillKnown" placeholder="Skills seperated by ;" id="skillKnown"
+                            class="input" required>
+                    </div>
+                    <div class="text-xs w-full">
+                        <label for="experience" class="block text-gray-800">Experience?</label>
+                        <select name="experience" id="experience" class="input" required>
+                            <option value="">Select Experience</option>
+                            <option value="0.6">less than 6 month</option>
+                            <option value="2">less than 2 Years</option>
+                            <option value="3">less than 3 Years</option>
+                            <option value="5">less than 5 Years</option>
+                        </select>
+                    </div>
+                    <div class="text-xs w-full">
+                        <label for="career_changed" class="block text-gray-800">Did CyberDude Change your
+                            career?</label>
+                        <textarea name="career_changed" placeholder="Explain briefly in 250 words." id="career_changed"
+                            class="input" required></textarea>
+                    </div>
+                    <div class="text-xs w-full">
+                        <label for="course_completions" class="block text-gray-800">Have you attended any course
+                            completions?</label>
+                        <textarea name="course_completions" placeholder="If any, explain briefly."
+                            id="course_completions" class="input" required></textarea>
+                    </div>
+                    <div class="text-xs w-full">
+                        <label for="studies" class="block text-gray-800">Studies & Year of Graduation</label>
+                        <input type="text" name="studies" placeholder="B.E, 2020" id="studies" class="input" required>
+                    </div>
+                    <div></div>
+                    <div class="text-xs w-full">
+                        <label for="linkedin" class="block text-gray-800">LinkedIn Profile</label>
+                        <input type="url" name="linkedin" placeholder="LinkedIn URL" id="linkedin" class="input"
+                            required>
+                    </div>
+                    <div class="text-xs w-full">
+                        <label for="github" class="block text-gray-800">Github Profile</label>
+                        <input type="url" name="github" placeholder="Github URL" id="github" class="input" required>
+                    </div>
+                    <div class="text-xs w-full col-span-2">
+                        <label for="reason" class="block text-gray-800">Why you need to join this
+                            internship?</label>
+                        <textarea name="reason" placeholder="Explain briefly in 250 words." id="reason" class="input"
+                            rows="10" required></textarea>
+                    </div>
+                    <div class="col-span-2">
+                        <label for="terms" class="flex text-xs">
+                            <input type="checkbox" name="terms" required />
+                            <span class="ml-2">I accept the <a href="#termsContent" class="text-orange-600">terms and
+                                    conditions</a>
+                                mentioned above.</span></label>
+                        <label for="terms" class="mt-5 flex text-xs">
+                            <input type="checkbox" name="terms" required />
+                            <span class="ml-2">I accept I need the following requirements to proceed this
+                                internship.</span>
+                        </label>
+                    </div>
+                    <div class="col-span-2">
+                        <button class="px-4 py-1 bg-orange-600 text-sm text-white rounded">Apply</button>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+
+        <div class="bg-white p-5 rounded w-96 h-fit" id="termsContent">
+            <h3 class="text-sm font-semibold">Terms and Conditions.</h3>
+            <p class="text-xs mt-2">
+                This program is only for people who need it badly. If you can afford education, please look at the
+                private training insitutitions which offers the same education. <br> <br>
+                We can understand money is essential but we wanted to make sure that, this program doesn’t offers you
+                any stipend. Its purely skill oriented.
+                This program is more than learning. you will learn leadership, communication, workmanship etc.
+
+                Take a outh that, if you learn something here, share it with the other.
+            <ul class="text-xs list-disc p-5 space-y-2">
+                <li>You have to work Min. 6 hours
+                    every day.</li>
+                <li>This program is only for beginners, You shouldn’t work in any other companies.</li>
+                <li>You should have whatsapp/laptop/internet with webcam access. You should be available anytime durning
+                    the working hours.</li>
+                <li>Once shortlisted candidates, will have a video call, They have to present why they should be in this
+                    program.</li>
+                <li>The selected candidates will be invited to group where the internship program continues.</li>
+            </ul>
+            </p>
+        </div>
+    </main>
+
+    <section class="bg-white max-w-xl mx-auto p-10 m-10 rounded hidden" id="formSubmitted">
+        <div class="flex space-x-4">
+            <div class="text-4xl">🙂</div>
+
+            <div>
+                <h1 class="font-xl font-semibold">Thank you. We received your application.</h1>
+                <p class="text-sm text-gray-600">Your application has been successfully registered.</p>
+                <button class="px-4 py-1 rounded bg-blue-500 text-white text-xs my-2">Share</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- scripts: For interactivity -->
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
