@@ -7,11 +7,11 @@ const submitForm = (e) => {
 
   const formData = new FormData(formEl)
 
-  console.log([...formData.entries()])
-  console.log([...formData.values()])
+  const recordObj = Object.fromEntries(formData)
+  createRecord(recordObj)
 
   // Update UI logic
-  //   updateUI()
+  updateUI()
 }
 
 const updateUI = () => {
