@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="/dist/output.css">
+
+    <script>
+        const userObj = JSON.parse(localStorage.getItem('user'))
+
+        if (!userObj) {
+            window.location.replace('/src/login.html')
+        }
+
+        const logout = () => {
+            const userObj = localStorage.removeItem('user')
+            window.location.replace('/src/login.html')
+        }
+    </script>
+</head>
+
+<body class="bg-gray-200">
+    <header class="bg-indigo-900 text-center p-10">
+        <a href="./index.html" class="font-black text-orange-500 text-2xl">CYBERDUDE</a>
+        <p class="text-gray-300 text-sm mt-2 font-semibold">Free education for everyone</p>
+        <button class="mt-2 px-4 py-1 rounded bg-white text-xs " onclick="logout()">Logout</button>
+    </header>
+
+    <main class="m-10">
+        <div class="bg-white  p-5 rounded  shadow">
+            <h3 class="text-sm font-semibold">Dashboard</h3>
+            <p class="text-xs text-gray-500">See the list of registration here</p>
+
+            <table>
+
+            </table>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="./js/firebase.js"></script>
+
+    <!-- scripts: For interactivity -->
+</body>
+
+</html>

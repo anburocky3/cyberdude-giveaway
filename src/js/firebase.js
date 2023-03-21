@@ -10,6 +10,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig)
 const db = firebase.firestore()
+const auth = firebase.auth()
 
 const createRecord = (record) => {
   return db
@@ -21,4 +22,23 @@ const createRecord = (record) => {
     .catch((error) => {
       console.error('Error adding document: ', error)
     })
+}
+
+const loginUser = (email, password) => {
+  return new Promise((resolve, reject) => {
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        let user = userCredential.user
+
+        resolve(user)
+      })
+      .catch((error) => {
+        var errorCode = error.code
+        var errorMessage = error.message
+
+        reject({ errorCode, errorMessage })
+      })
+  })
 }

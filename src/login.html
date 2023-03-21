@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- TailwindCSS -->
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+
+<body class="bg-gray-200">
+    <header class="bg-indigo-900 text-center p-10">
+        <a href="./index.html" class="font-black text-orange-500 text-2xl">CYBERDUDE</a>
+        <p class="text-gray-300 text-sm mt-2 font-semibold">Free education for everyone</p>
+    </header>
+
+    <main class="m-10">
+        <div class="bg-white max-w-2xl mx-auto p-5 rounded  shadow">
+            <h3 class="text-sm font-semibold">Admin Panel</h3>
+            <p class="text-xs text-gray-600 mt-1">Login to view records.</p>
+
+            <!-- Form -->
+            <form class="my-5 space-y-4" id="loginForm">
+                <div class="text-xs w-full">
+                    <label for="email" class="block text-gray-800">Email Address</label>
+                    <input type="email" name="email" placeholder="Email Address" id="email" class="input" required>
+                </div>
+
+                <div class="text-xs w-full">
+                    <label for="password" class="block text-gray-800">Password</label>
+                    <input type="password" name="password" placeholder="Password" id="password" class="input" required>
+                </div>
+                <button class="px-4 py-1 bg-orange-600 text-sm text-white rounded">Login</button>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="./js/firebase.js"></script>
+
+    <!-- scripts: For interactivity -->
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
