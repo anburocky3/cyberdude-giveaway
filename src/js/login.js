@@ -28,6 +28,15 @@ const handleLoginForm = (e) => {
       if (errorCode === 'auth/user-not-found') {
         alert("Username/Password doesn't exist")
       }
+
+      if (errorCode === 'auth/wrong-password') {
+        alert('Password Invalid!')
+      }
+
+      if (errorCode === 'auth/too-many-requests') {
+        alert('Tried too much... Retry again.')
+      }
+
       loginFormEl.reset()
     })
 }

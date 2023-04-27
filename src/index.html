@@ -40,10 +40,17 @@
                                 Others</label>
                         </div>
                     </div>
-                    <div class="text-xs w-full">
-                        <label for="emailAddress" class="block text-gray-800">Email Address</label>
-                        <input type="email" name="email" placeholder="you@wonderful.com" id="emailAddress" class="input"
-                            required>
+                    <div class="grid grid-cols-2 gap-x-4">
+                        <div class="text-xs w-full">
+                            <label for="emailAddress" class="block text-gray-800">Email Address</label>
+                            <input type="email" name="email" placeholder="you@wonderful.com" id="emailAddress"
+                                class="input" required>
+                        </div>
+                        <div class="text-xs w-full">
+                            <label for="mobile" class="block text-gray-800">Phone number</label>
+                            <input type="number" name="mobile" placeholder="Mobile Number" id="mobile" class="input"
+                                required>
+                        </div>
                     </div>
                     <div class="text-xs w-full">
                         <label for="dob" class="block text-gray-800">Date of Birth</label>
@@ -98,13 +105,14 @@
                     </div>
                     <div class="col-span-2">
                         <label for="terms" class="flex text-xs">
-                            <input type="checkbox" name="terms" required />
-                            <span class="ml-2">I accept the <a href="#termsContent" class="text-orange-600">terms and
+                            <input type="checkbox" id="terms" name="terms" required />
+                            <span class="ml-2 select-none">I accept the <a href="#termsContent"
+                                    class="text-orange-600">terms and
                                     conditions</a>
                                 mentioned above.</span></label>
                         <label for="requirements_terms" class="mt-5 flex text-xs">
-                            <input type="checkbox" name="requirements_terms" required />
-                            <span class="ml-2">I accept I need the following requirements to proceed this
+                            <input type="checkbox" id="requirements_terms" name="requirements_terms" required />
+                            <span class="ml-2 select-none">I accept I need the following requirements to proceed this
                                 internship.</span>
                         </label>
                     </div>
@@ -149,6 +157,7 @@
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script src="./js/firebase.js"></script>
 
     <!-- scripts: For interactivity -->
